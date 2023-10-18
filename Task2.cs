@@ -18,7 +18,13 @@ namespace Lab6
         }
 
         public void CreateKeyboard() => row = Console.ReadLine();
-        public override void Show() => Console.WriteLine(row);
+        public override void Show()
+        {
+            if (row == null ||  row.Length == 0) 
+                Console.WriteLine("Пустая строка");
+            else
+                Console.WriteLine(row);
+        }
 
         public void MoveLeft()
         {
